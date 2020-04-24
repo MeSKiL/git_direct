@@ -1,0 +1,4 @@
+# 加/代表文件夹，不加的话idea文件与idea文件夹都会被忽略
+.idea/
+# git rm -r --cached . 清除缓存
+READEME.md
