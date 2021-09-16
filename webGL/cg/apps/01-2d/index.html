@@ -1,0 +1,50 @@
+<html>
+<head>
+    <link rel='stylesheet' href="common.css">
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+    // attribute说明a_position是一组数据
+    // vec2是二维向量
+    // uniform 统一的 u_resolution 分辨率
+    // zeroToOne把传入的点都变成屏幕上的点
+    // clipSpace 裁剪空间
+    // gl_Position内置变量
+</script>
+<script type="notjs" id='vertex-shader'>
+      attribute vec2 a_position;
+      uniform vec2 u_resolution;
+
+      void main(){
+        // 顶点着色器 映射到[-1,1]的区间中
+        // [0, 1]
+        vec2 zeroToOne = a_position / u_resolution;
+        // [0, 2]
+        vec2 zeroToTwo = zeroToOne * 2.0;
+        // [-1, 1]
+        vec2 clipSpace = zeroToTwo - 1.0;
+
+        gl_Position = vec4(clipSpace * vec2(1, -1),0,1);
+      }
+
+</script>
+
+<script>
+
+</script>
+<script type="notjs" id='fragment-shader'>
+      precision mediump float;
+
+      uniform vec4 u_color;
+
+      void main() {
+        gl_FragColor = u_color;
+      }
+
+</script>
+
+
+<script src="__APP__.js"></script>
+</body>
+</html>

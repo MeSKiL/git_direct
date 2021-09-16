@@ -1,0 +1,6 @@
+export {perspective} from './project'
+export {identity2d, identity3d, identity4d} from './identity'
+export {translate2d} from './translate2d'
+export {multiply, multiply3d, multiply4d, multiplynd} from './multiply'
+export {scale2d} from './scale'
+export {rotateZ, rotateY, rotate2d, rotateX} from './rotate'

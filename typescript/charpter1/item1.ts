@@ -1,0 +1,4 @@
+// remember
+// typescript是javascript的超集，换句话说，所有的javascript程序都是typescript程序，typescript有自己的语法，所以普遍来说typescript不是有效的javascript程序
+// typescript增加了类型系统去模拟javascript运行时的表现，试着去发现在运行时会抛错的代码。但是我们不能希望他为我们发现所有异常，通过了类型检查的代码也可能在运行时抛出异常
+// 当typescript的类型系统最大程度的去模拟javascript的运行时的时候，很多js允许的用法，在ts里是被禁止的。比如函数参数数量的错误，这和个人喜好有关。
